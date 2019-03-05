@@ -47,6 +47,7 @@
 		BF5AE474222E115B00BB1A14 /* notifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = notifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5AE478222E115B00BB1A14 /* notifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notifyUITests.swift; sourceTree = "<group>"; };
 		BF5AE47A222E115B00BB1A14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF5AE486222E117000BB1A14 /* notify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = notify.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +98,7 @@
 		BF5AE457222E115900BB1A14 /* notify */ = {
 			isa = PBXGroup;
 			children = (
+				BF5AE486222E117000BB1A14 /* notify.entitlements */,
 				BF5AE458222E115900BB1A14 /* AppDelegate.swift */,
 				BF5AE45A222E115900BB1A14 /* ViewController.swift */,
 				BF5AE45C222E115900BB1A14 /* Main.storyboard */,
@@ -193,6 +195,11 @@
 				TargetAttributes = {
 					BF5AE454222E115900BB1A14 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					BF5AE468222E115B00BB1A14 = {
 						CreatedOnToolsVersion = 10.1;
@@ -432,7 +439,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = notify/notify.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5PP5X37S56;
 				INFOPLIST_FILE = notify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,7 +458,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = notify/notify.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5PP5X37S56;
 				INFOPLIST_FILE = notify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
